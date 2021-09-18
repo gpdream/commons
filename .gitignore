@@ -1,0 +1,9 @@
+output/
+.idea/
+script/settings.py
+.DS_Store
+.log
+info.log
+tele_server/log
+kitex_remote_config.json
+settings.py
