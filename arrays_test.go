@@ -1,4 +1,4 @@
-package arrays
+package commons
 
 import (
 	"github.com/stretchr/testify/assert"
@@ -47,8 +47,8 @@ func TestSplit(t *testing.T) {
 	a.True(len(res[0])==1)
 }
 
-func genItems(size int) []Item {
-	items := make([]Item, 0, size)
+func genItems(size int) []interface{} {
+	items := make([]interface{}, 0, size)
 	for i:=0;i<size;i++ {
 		item := Item{
 			Name: "wangba",

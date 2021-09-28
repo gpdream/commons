@@ -1,6 +1,8 @@
-package jsons
+package commons
 
-import "testing"
+import (
+	"testing"
+)
 import "github.com/stretchr/testify/assert"
 type Test struct {
 	Name string

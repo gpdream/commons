@@ -1,8 +1,7 @@
-package arrays
+package commons
 
 import (
 	"github.com/ahmetalpbalkan/go-linq"
-	"github.com/gpdream/commons"
 	"github.com/pkg/errors"
 	"reflect"
 )
@@ -61,7 +60,7 @@ func Intersect(x interface{}, y interface{}, res interface{}) error {
 	xType := reflect.ValueOf(x).Type()
 	yType := reflect.ValueOf(y).Type()
 	zType := reflect.ValueOf(res).Type()
-	if commons.NotEqual(xType, yType) || commons.NotEqual(xType, zType) {
+	if NotEqual(xType, yType) || NotEqual(xType, zType) {
 		return errors.Errorf("x,y,res type must equal, actually:%v,%v,%v", xType, yType, zType)
 	}
 	linq.From(xType).
